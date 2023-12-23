@@ -9,7 +9,7 @@ to the beginning of the given list
 indexes 1 and 5  (1<->5) and print result
 3 - check condition that all people in modified
 list with records indexes 6, 10, 13
-     have age >=30 and print result
+have age >=30 and print result
 """
 
 people_records = [
@@ -30,18 +30,16 @@ people_records = [
     ('Ethan', 'Anderson', 36, 'Product Manager', 'Phoenix'),
 ]
 new_record = ('Olga', 'Black', 43, 'Student', 'Odesa')
-people_records.append(new_record)
+people_records.insert(0, new_record)
+"""Modified list."""
+people_records[1], people_records[5] = people_records[5], people_records[1]
 
-substitution = people_records[1]
-people_records[1] = people_records[5]
-people_records[5] = substitution
-
-print(substitution)
 print(people_records)
 
-if (people_records[6][2] > 30
-        and people_records[10][2] > 30
-        and people_records[13][2] > 30):
+indexes_check = [6, 10, 13]
+result = all(people_records[i][2] >= 30 for i in indexes_check)
+
+if result:
     print(True)
 else:
     print(False)
