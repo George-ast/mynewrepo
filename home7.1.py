@@ -12,12 +12,12 @@ w, x, y, z = 100, 200, 40, 300
 w, x, y, z = 100, 200, 40, 300
 
 """
-Checking each condition whether the number is the smallest.
+Checking the number is the smallest.
 """
 
 if (x < w) and (x < y) and (x < z):
     print('x is minimum value')
-elif (y < w) and (y < x) and (y < z):
+elif (y <= w) and (y <= x) and (y <= z):
     print('y is minimum value')
 elif (w < x) and (w < y) and (w < z):
     print('w is minimum value')
