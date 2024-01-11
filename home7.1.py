@@ -15,11 +15,11 @@ w, x, y, z = 100, 200, 40, 300
 Checking the number is the smallest.
 """
 
-if (x < w) and (x < y) and (x < z):
+if (x <= w) and (x <= y) and (x <= z):
     print('x is minimum value')
 elif (y <= w) and (y <= x) and (y <= z):
     print('y is minimum value')
-elif (w < x) and (w < y) and (w < z):
+elif (w <= x) and (w <= y) and (w <= z):
     print('w is minimum value')
 else:
     print('z is minimum value')
